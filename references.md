@@ -2,7 +2,7 @@
 
 Specs
 * [RTMFP](https://tools.ietf.org/html/rfc7425), IETF Independent Submission, Category: Informational, December 2014
-* [Adobe RTMP Specification](www.adobe.com/content/dam/acom/en/devnet/rtmp/pdf/rtmp_specification_1.0.pdf)
+* [Adobe RTMP Specification](https://www.adobe.com/content/dam/acom/en/devnet/rtmp/pdf/rtmp_specification_1.0.pdf)
 
 
 Related
