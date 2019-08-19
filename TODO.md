@@ -24,8 +24,8 @@ Notes from RTMFP Spec:
 ### Connect
 connect (section 7.2.1.1 in [RTMP spec](https://www.adobe.com/content/dam/acom/en/devnet/rtmp/pdf/rtmp_specification_1.0.pdf))
 * `tcUrl` needs clarification, currently listed as "URL of the Server" but it also specifies the protocol and app path `protocol://servername:port/appName/appInstance` with the only example given as `rtmp://localhost:1935/testapp/instance1`
-  * clarify protocol must be `rtmp` or `rtmps`
-  * explain app name and instance
+  * clarify that URL scheme must be `rtmp` -- this message should be the same no matter what the underlying transport is
+  * TODO: explain app name and instance
 
 
 
