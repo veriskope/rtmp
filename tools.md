@@ -5,6 +5,7 @@
 * RTMPdump: https://rtmpdump.mplayerhq.hu
 * libcurl: https://curl.haxx.se/libcurl/c/CURLOPT_URL.html
 * ffmpeg: https://ffmpeg.org/
+* flvmeta: https://www.flvmeta.com
 
 ## Network analysis
 

@@ -1,27 +1,20 @@
 # Real Time Messaging Protocol Overview
 
-Real Time Messaging Protocol (RTMP) supports one or more audio, video and data streams, as well as system and user-defined command messages. The protocol was designed to support very low-latency for interactive, multiparty applications with seamless integration of live or recorded video, as well as broadcast streaming, video on demand (VOD) use cases.
+Real Time Messaging Protocol (RTMP) was designed to support very low-latency for interactive, multiparty applications with seamless integration of live or recorded video, as well as broadcast streaming, video on demand (VOD) use cases.
+
+Messaging features:
+- one or more audio, video and data streams
+- system and user-defined command messages
+- data synchronization (shared objects)
 
 RTMP supports multiple transports:
 * TCP/IP, optionally with secure socket connection
 * HTTP/S
 * UDP via [RTMFP](https://tools.ietf.org/html/rfc7425)
 
-### Connect
-
-1. Handshake (5.2)
-2. Client Command Message: Connect
-3. Bandwidth Coordination
-4. Server Message: StreamBegin
-5. Server Command Response: Connect success/failure
-
-### Command Messages
-
-<TODO>
-
 ### Multiplexed Streams
 
-After handshaking, the connection multiplexes one or more streams. Each stream is a logical channel, carrying messages of one type for a single audio, video or data stream.
+An RTMP connection multiplexes one or more streams. Each stream is a logical channel, carrying messages of one type for a single audio, video or data stream.
 
 The protocol supports multiple synchronized audio, video and data streams; however some client or server implementations may limit the number or type of streams.
 
@@ -34,4 +27,21 @@ When using a reliable, ordered transport protocol, such as TCP/IP, RTMP allows f
 
 Chunking allows small messages to be sent with less overhead, as the chunk header contains a compressed representation of information that would otherwise have to be included in the message itself.
 
+For more detail, see [chunk format](spec/chunk-format).
+
+
+### Initial Connection Sequence
+
+1. Handshake (spec section 5.2)
+2. Client Command Message: Connect
+3. Bandwidth Coordination
+4. Server Message: StreamBegin
+5. Server Command Response: Connect success/failure
+
+### Command Messages
+
+A client or a server can make a Remote Procedure Call (RPC) using command messages to the peer.
+Command messages carry AMF encoded commands between the client and the server. 
+
+TO DO: add detail here
 
